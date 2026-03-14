@@ -1,9 +1,15 @@
-for (let b = 1; b <= 6; b++) {
-  let c = '';
-  let d = b % 2 === 1 ? 1 : 0;
-  
-  for (let e = 0; e < b; e++) {
-    c += ((d + e) % 2) + (e < b - 1 ? ' ' : '');
-  }
-  console.log(c);
+function printBinaryTriangle(rows) {
+    for (let i = 1; i <= rows; i++) {
+        let rowOutput = "";
+        
+        for (let j = 1; j <= i; j++) {
+            if ((i + j) % 2 === 0) {
+                rowOutput += "1 ";
+            } else {
+                rowOutput += "0 ";
+            }
+        }
+        console.log(rowOutput.trim());
+    }
 }
+printBinaryTriangle(6);
